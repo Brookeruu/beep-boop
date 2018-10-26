@@ -15,21 +15,33 @@
 //     }
 // return emptyArray;
 // };
+var onesNumbers = [1];
+console.log(onesNumbers);
 
 function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
   for (var i = 0; i < beepArray.length; i++) {
     if (i % 10 === 0 || i === 0) {
-      beepArray[i] = ["Beep!"];
+      beepArray[i] = "Beep!";
     }
   }
   return beepArray;
 }
 
+function sorry(array) {
+  var sorryArray = array;
+  for (var i = 0; i < sorryArray.length; i++) {
+    if (i % 3 === 0) {
+      sorryArray[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
+    }
+  }
+  return sorryArray;
+}
+
 function boop(array) {
   var boopArray = array;
   for (var i = 0; i < boopArray.length; i++) {
-    if (i % 3 === 0) {
+    if (onesNumbers.includes(boopArray[i])) {
       boopArray[i] = "Boop!";
     }
   }
@@ -66,8 +78,10 @@ $(document).ready(function() {
   var beepTest = beep(convertedArray);
   // console.log(beepTest);
 
-  var boopTest = boop(beepTest);
-  console.log(boopTest);
+  var sorryTest = sorry(beepTest);
+  console.log(sorryTest);
+
+  var boopTest = boop(sorryTest);
   // conertedArray is the array of numbers, up to userInput #
 
 
