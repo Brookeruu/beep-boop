@@ -1,15 +1,17 @@
 // Business Logic
 var arrayOfNumbers1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 var arrayOfExceptions = ["Beep!","Boop!","Sorry, I cannot do that!", "Invalid Number!"];
-var emptyArray = [];
+var arrya1 = [1];
+var arry0 = [0];
 
 function makeAstringOfNummbers(number) {
+  var emptyArray = [];
   for (var i = 0; i < arrayOfNumbers1.length; i ++);
     if (number > 0 && number < arrayOfNumbers1.length) {
       if (number % 3 === 0) {
         emptyArray.push(arrayOfExceptions[2])
       }else if (number === 0 || number % 10 === 0) {
-        emptyArray.push(arrayOfExceptions[1])
+        emptyArray.push(arrayOfExceptions[0])
       }
     }
 return emptyArray;
