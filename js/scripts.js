@@ -4,7 +4,7 @@
 // var arrya1 = [1]
 // var emptyArray = [];
 //
-// function makeAstringOfNummbers(number) {
+// function makeArrayWithExceptions(arrayOfNumbers) {
 //   for (var i = 0; i < arrayOfNumbers1.length; i ++);
 //     if (number > 0 && number < arrayOfNumbers1.length) {
 //       if (number % 3 === 0) {
@@ -16,24 +16,15 @@
 // return emptyArray;
 // };
 
-function beep(array) { //argument will be convertedNumber
+function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
-  console.log(beepArray);
   for (var i = 0; i < beepArray.length; i++) {
     if (i % 10 === 0 || i === 0) {
-      beepArray[i] = "Beep!";
+      beepArray[i] = ["Beep!"];
     }
   }
   return beepArray;
-  // console.log(beepArray);
 }
-
-// function boop(array) {
-//   var boopArray = array;
-//   for (var i )
-// }
-//
-
 
 function convertNumberToArray(number) { //number is inputNumber as argument
   if (number < 0 || number > 100) {
@@ -61,6 +52,9 @@ $(document).ready(function() {
   console.log(inputNumber);
   var convertedArray = convertNumberToArray(inputNumber);
   console.log(convertedArray);
+
+  var beepTest = beep(convertedArray);
+  console.log(beepTest);
   // conertedArray is the array of numbers, up to userInput #
 
 
