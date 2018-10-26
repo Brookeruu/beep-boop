@@ -16,18 +16,23 @@
 // return emptyArray;
 // };
 
-function beep(array) {
+function beep(array) { //argument will be convertedNumber
   var beepArray = array;
+  console.log(beepArray);
   for (var i = 0; i < beepArray.length; i++) {
     if (i % 10 === 0 || i === 0) {
-      beepArray[i] = "Beep!"
+      beepArray[i] = "Beep!";
     }
   }
   return beepArray;
+  // console.log(beepArray);
 }
 
-
-
+// function boop(array) {
+//   var boopArray = array;
+//   for (var i )
+// }
+//
 
 
 function convertNumberToArray(number) { //number is inputNumber as argument
@@ -35,16 +40,15 @@ function convertNumberToArray(number) { //number is inputNumber as argument
     alert("Invalid Number: returning 10");
     number = 10;
   }
-  var arrayOfNumbers = new Array(number);
+  var arrayOfNumbers = new Array(number + 1); //new Array() creates array with empty spaces to fill
   var count = 0; //each empty space receives count
   for (var i = 0; i < arrayOfNumbers.length; i++) {
     arrayOfNumbers[i] = count;
     count += 1;
   }
-  return arrayOfNumbers;
+  return arrayOfNumbers; //array with numbers in each empty space, up to # of inputNumber;
+  console.log(arrayOfNumbers);
 }
-
-
 
 
 // User Interface
@@ -54,12 +58,14 @@ $(document).ready(function() {
     event.preventDefault();
 
   var inputNumber = parseInt($("#numberInput").val());
+  console.log(inputNumber);
   var convertedArray = convertNumberToArray(inputNumber);
+  console.log(convertedArray);
   // conertedArray is the array of numbers, up to userInput #
-  // console.log(originalUserInput);
 
-  var resultToShowUser = makeAstringOfNummbers(inputNumber);
-console.log(resultToShowUser);
+
+  // var resultToShowUser = makeAstringOfNummbers(inputNumber);
+
 
   });
 });
