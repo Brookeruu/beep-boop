@@ -18,6 +18,27 @@ Clone this repository
 Open in browser of your choice
 
 **Specs**
+Beep Boop Specs
+
+* _Backend_
+
+
+* Take value and turn into integer
+* Create for array 1 for numbers 1-15
+* Create array2 for output for numbers with exceptions
+* Create empty string/array3 to hold output numbers
+* Use loop to compare array 1, to array 2, and stop when the array 1 matches the input number
+* Create variable to turn array3 into a string
+
+* _User Interface_
+* User inputs a number (limit number to 10-15)
+* Show result in html
+* When submit button is pressed, hide input field and button1
+* Create div for original input and returned string, and button2 to try another number
+* When button2 is clicked, it will hide results and itselft, but show input field and input button
+
+
+
 
 **Known Bugs**
 
