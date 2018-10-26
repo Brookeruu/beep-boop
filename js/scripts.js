@@ -15,8 +15,7 @@
 //     }
 // return emptyArray;
 // };
-var onesNumbers = [1];
-console.log(onesNumbers);
+var onesNumbers = [/[1]/];
 
 function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
@@ -31,7 +30,7 @@ function beep(array) { //argument will be arrayOfNumbers
 function sorry(array) {
   var sorryArray = array;
   for (var i = 0; i < sorryArray.length; i++) {
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i !== 0) {
       sorryArray[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
     }
   }
@@ -60,7 +59,6 @@ function convertNumberToArray(number) { //number is inputNumber as argument
     count += 1;
   }
   return arrayOfNumbers; //array with numbers in each empty space, up to # of inputNumber;
-  console.log(arrayOfNumbers);
 }
 
 
@@ -69,6 +67,7 @@ function convertNumberToArray(number) { //number is inputNumber as argument
 $(document).ready(function() {
   $(".form-group").submit(function(event) {
     event.preventDefault();
+
 
   var inputNumber = parseInt($("#numberInput").val());
   // console.log(inputNumber);
@@ -79,9 +78,11 @@ $(document).ready(function() {
   // console.log(beepTest);
 
   var sorryTest = sorry(beepTest);
-  console.log(sorryTest);
 
   var boopTest = boop(sorryTest);
+  console.log(boopTest);
+  $("#results").append(sorryTest);
+  $(".result").show();
   // conertedArray is the array of numbers, up to userInput #
 
 
