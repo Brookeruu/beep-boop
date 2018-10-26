@@ -16,7 +16,17 @@
 // return emptyArray;
 // };
 
-function 
+function beep(array) {
+  var beepArray = array;
+  for (var i = 0; i < beepArray.length; i++) {
+    if (i % 10 === 0 || i === 0) {
+      beepArray[i] = "Beep!"
+    }
+  }
+  return beepArray;
+}
+
+
 
 
 
