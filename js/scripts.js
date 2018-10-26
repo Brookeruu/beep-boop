@@ -4,19 +4,16 @@ var arrayOfExceptions = ["Beep!","Boop!","Sorry, I cannot do that!", "Invalid Nu
 var emptyArray = [];
 
 function makeAstringOfNummbers(number) {
-
   for (var i = 0; i < arrayOfNumbers1.length; i ++);
     if (number > 0 && number < arrayOfNumbers1.length) {
       if (number % 3 === 0) {
-        emptyArray.push(arrayOfExceptions[3])
-        return makeAstringOfNummbers(number);
+        emptyArray.push(arrayOfExceptions[2])
       }else if (number === 0 || number % 10 === 0) {
         emptyArray.push(arrayOfExceptions[1])
-        return makeAstringOfNummbers(number)
       }
     }
 return emptyArray;
-});
+};
 
 
 
@@ -30,7 +27,7 @@ $(document).ready(function() {
   // console.log(originalUserInput);
 
   var resultToShowUser = makeAstringOfNummbers(inputNumber);
-  console.log(makeAstringOfNummbers);
+console.log(resultToShowUser);
 
   });
 });
