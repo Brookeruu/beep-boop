@@ -17,7 +17,6 @@
 // };
 var onesNumbers = [/[1]/];
 
-
 function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
   for (var i = 0; i < beepArray.length; i++) {
@@ -38,15 +37,15 @@ function sorry(array) {
   return sorryArray;
 }
 
-function boop(array) {
-  var boopArray = array;
-  for (var i = 0; i < boopArray.length; i++) {
-    if (onesNumbers.includes(boopArray[i])) {
-      boopArray[i] = " Boop! ";
-    }
-  }
-  return boopArray;
-}
+// function boop(array) {
+//   var boopArray = array;
+//   for (var i = 0; i < boopArray.length; i++) {
+//     if (onesNumbers.includes(boopArray[i])) {
+//       boopArray[i] = " Boop! ";
+//     }
+//   }
+//   return boopArray;
+// }
 
 function convertNumberToArray(number) { //number is inputNumber as argument
   if (number < 0 || number > 100) {
@@ -70,28 +69,31 @@ $(document).ready(function() {
     event.preventDefault();
 
 
-  var inputNumber = parseInt($("#numberInput").val());
-  // console.log(inputNumber);
-  var convertedArray = convertNumberToArray(inputNumber);
-  // console.log(convertedArray);
+    var inputNumber = parseInt($("#numberInput").val());
+    // console.log(inputNumber);
+    var convertedArray = convertNumberToArray(inputNumber);
+    // console.log(convertedArray);
 
-  var beepTest = beep(convertedArray);
-  // console.log(beepTest);
+    var beepTest = beep(convertedArray);
+    // console.log(beepTest);
 
-  var sorryTest = sorry(beepTest);
+    var sorryTest = sorry(beepTest);
 
-  var boopTest = boop(sorryTest);
+    // var sorryTest = sorry(sorryTest);
 
-  var boopString = boopTest.toString("");
-  console.log(boopString);
+    var sorryString = sorryTest.toString("");
+    console.log(sorryString);
 
-
-  $("#results").append(boopString);
-  $(".result").show();
-  // conertedArray is the array of numbers, up to userInput #
+    var finalString = onesNumbers.includes(sorryString);
+    console.log(finalString);
 
 
-  // var resultToShowUser = makeAstringOfNummbers(inputNumber);
+    $("#results").append(sorryString);
+    $(".result").show();
+    // conertedArray is the array of numbers, up to userInput #
+
+
+    // var resultToShowUser = makeAstringOfNummbers(inputNumber);
 
 
   });
