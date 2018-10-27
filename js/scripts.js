@@ -84,11 +84,11 @@ $(document).ready(function() {
     var sorryString = sorryTest.toString("");
     console.log(sorryString);
 
-    var finalString = onesNumbers.includes(sorryString);
+    var finalString = sorryString.replace(/[1]/g, "Boop!");
     console.log(finalString);
+    console.log(/[1]/.test(sorryString));
 
-
-    $("#results").append(sorryString);
+    $("#results").append(finalString);
     $(".result").show();
     // conertedArray is the array of numbers, up to userInput #
 
