@@ -1,6 +1,4 @@
-Which Programming Language Should I Study?
-
-Git, HTML, CSS, JavaScript, jQuery
+## Beep Boop 
 
 By Brooke Perry
 
