@@ -15,19 +15,23 @@
         <form class="form-group" action="index.html" method="post">
         <label for="numberInput">Enter a number 0-100:</label>
         <input id="numberInput" type="number" name="" value="">
-        <button type="submit" name="button" class="btn btn-info">Results!</button>
+        <button type="submit" name="button" class="btn btn-info"  id="button">Results!</button>
         </form>
       </div>
+<form class="form-group" id="form2">
 
+      <div class="result" id="form2">
       <div class="originalInput">
-       </div>
-       <div class="result">
+        <p>You entered: <span id="originalNum"></span></p>
          <p>Your results are:</p>
          <ul><span id="results"></span>
 
          </ul>
+         <!-- <button type="reset" id="button2">Enter another number</button> -->
+       </div>
 
        </div>
+     </form>
 
 <!-- closing container div -->
     </div>

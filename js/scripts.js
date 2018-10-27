@@ -37,16 +37,6 @@ function sorry(array) {
   return sorryArray;
 }
 
-// function boop(array) {
-//   var boopArray = array;
-//   for (var i = 0; i < boopArray.length; i++) {
-//     if (onesNumbers.includes(boopArray[i])) {
-//       boopArray[i] = " Boop! ";
-//     }
-//   }
-//   return boopArray;
-// }
-
 function convertNumberToArray(number) { //number is inputNumber as argument
   if (number < 0 || number > 100) {
     alert("Invalid Number: returning 10");
@@ -68,7 +58,6 @@ $(document).ready(function() {
   $(".form-group").submit(function(event) {
     event.preventDefault();
 
-
     var inputNumber = parseInt($("#numberInput").val());
     // console.log(inputNumber);
     var convertedArray = convertNumberToArray(inputNumber);
@@ -82,21 +71,16 @@ $(document).ready(function() {
     // var sorryTest = sorry(sorryTest);
 
     var sorryString = sorryTest.toString("");
-    console.log(sorryString);
 
     var finalString = sorryString.replace(/[1]/g, "Boop!");
-    console.log(finalString);
-    console.log(/[1]/.test(sorryString));
-
-    $("#results").append(finalString);
+    $("#results").text(finalString);
     $(".result").show();
-    $(".formDiv").hide();
-    
-    // conertedArray is the array of numbers, up to userInput #
-
-
-    // var resultToShowUser = makeAstringOfNummbers(inputNumber);
-
+    // $("#form-group").reset();
+    // $(".formDiv").hide();
+    $("#originalNum").text(inputNumber);
+    // $("#button").click(function() {
+    //   (".form-group").this("reset");
+    // });
 
   });
 });
