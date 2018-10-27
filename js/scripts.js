@@ -1,20 +1,5 @@
-// // Business Logic
-// var arrayOfNumbers1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, ];
-// var arrayOfExceptions = ["Beep!","Boop!","Sorry, I cannot do that!", "Invalid Number!"];
-// var arrya1 = [1]
-// var emptyArray = [];
-//
-// function makeArrayWithExceptions(arrayOfNumbers) {
-//   for (var i = 0; i < arrayOfNumbers1.length; i ++);
-//     if (number > 0 && number < arrayOfNumbers1.length) {
-//       if (number % 3 === 0) {
-//         emptyArray.push(arrayOfExceptions[2])
-//       } else if (number === 0 || number % 10 === 0) {
-//         emptyArray.push(arrayOfExceptions[1])
-//       } else if ()
-//     }
-// return emptyArray;
-// };
+// Business Logic
+
 var onesNumbers = [/[1]/];
 
 function beep(array) { //argument will be arrayOfNumbers
@@ -59,28 +44,22 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputNumber = parseInt($("#numberInput").val());
-    // console.log(inputNumber);
+
     var convertedArray = convertNumberToArray(inputNumber);
-    // console.log(convertedArray);
 
     var beepTest = beep(convertedArray);
-    // console.log(beepTest);
 
     var sorryTest = sorry(beepTest);
-
-    // var sorryTest = sorry(sorryTest);
 
     var sorryString = sorryTest.toString("");
 
     var finalString = sorryString.replace(/[1]/g, "Boop!");
+
     $("#results").text(finalString);
+
     $(".result").show();
-    // $("#form-group").reset();
-    // $(".formDiv").hide();
+
     $("#originalNum").text(inputNumber);
-    // $("#button").click(function() {
-    //   (".form-group").this("reset");
-    // });
 
   });
 });
