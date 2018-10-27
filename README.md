@@ -9,11 +9,11 @@ _This site was create as the Intro to Programming Week 3 Independent Project. Th
 
 ### Specs
 * Program replaces any number with a 0 with "Beep!"
- * Example Input: 0, 20, 40, 100
+ * Example input: 0, 20, 40, 100
  * Expected output for each: "Beep!""
 * Program replaces any number divisible by 3 with "I'm sorry, Dave. I can't do that."
- * Example Input: 3, 12, 30, 48
- * * Expected output for each: "I'm sorry, Dave. I can't do that."
+ * Example input: 3, 12, 30, 48
+ * Expected output for each: "I'm sorry, Dave. I can't do that."
 * Program replaces any number with a 1 with "Boop!"
  * Example Input: 1, 11, 21, 61
  * Expected output for each: "Boop!""
@@ -26,6 +26,10 @@ Open in browser of your choice
 
 
 **Known Bugs**
+ * Only the 1 in digits is being changed to "Boop!"
+ * Example input: 21
+ * Expected output: "Boop!"
+ * Actual output: 2"Boop!"
 
 **Technologies Used**
 * html
