@@ -17,11 +17,12 @@
 // };
 var onesNumbers = [/[1]/];
 
+
 function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
   for (var i = 0; i < beepArray.length; i++) {
     if (i % 10 === 0 || i === 0) {
-      beepArray[i] = "Beep!";
+      beepArray[i] = " Beep! ";
     }
   }
   return beepArray;
@@ -31,7 +32,7 @@ function sorry(array) {
   var sorryArray = array;
   for (var i = 0; i < sorryArray.length; i++) {
     if (i % 3 === 0 && i !== 0) {
-      sorryArray[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
+      sorryArray[i] = " I'm sorry, Dave. I'm afraid I can't do that. ";
     }
   }
   return sorryArray;
@@ -41,7 +42,7 @@ function boop(array) {
   var boopArray = array;
   for (var i = 0; i < boopArray.length; i++) {
     if (onesNumbers.includes(boopArray[i])) {
-      boopArray[i] = "Boop!";
+      boopArray[i] = " Boop! ";
     }
   }
   return boopArray;
@@ -80,8 +81,12 @@ $(document).ready(function() {
   var sorryTest = sorry(beepTest);
 
   var boopTest = boop(sorryTest);
-  console.log(boopTest);
-  $("#results").append(sorryTest);
+
+  var boopString = boopTest.toString("");
+  console.log(boopString);
+
+
+  $("#results").append(boopString);
   $(".result").show();
   // conertedArray is the array of numbers, up to userInput #
 
