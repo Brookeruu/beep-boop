@@ -3,8 +3,7 @@
 
 By Brooke Perry
 
-_This site was create as the Intro to Programming Week 3 Independent Project. The purpose of this project is to have a user input a number and receive a string of numbers, starting from 0, through the number input, with the following exceptions:
-
+_This site was create as the Intro to Programming Week 3 Independent Project. The purpose of this project is to have a user input a number and receive a string of numbers, starting from 0, through the number input, with a few exceptions.
 
 Link to github: https://github.com/Brookeruu/beep-boop
 
@@ -12,11 +11,8 @@ Link to github: https://github.com/Brookeruu/beep-boop
 Clone this repository
 Open in browser of your choice
 
-**Known Bugs**
-* Function to select and replace numbers with a "1" not working
 
-
-### Specs
+#### Specs
 * Program replaces any number with a 0 with "Beep!"
  * Example input: 0, 20, 40, 100
  * Expected output for each: "Beep!""
@@ -27,28 +23,17 @@ Open in browser of your choice
  * Example Input: 1, 11, 21, 61
  * Expected output for each: "Boop!""
 
-Link to github: https://github.com/Brookeruu/beep-boop
+##### Known Bugs
+ * Function to select and replace numbers with a "1" not working
 
-##### Setup/Installation Requirements
-Clone this repository
-Open in browser of your choice
-
-
-**Known Bugs**
- * Only the 1 in digits is being changed to "Boop!"
- * Example input: 21
- * Expected output: "Boop!"
- * Actual output: 2"Boop!"
-
-
-**Technologies Used**
+##### Technologies Used
 * html
 * CSS
 * bootstrap
 * javascript
 * jquery
 
-**Contact**
+###### Contact
 Brooke Perry
 This software is licensed under the MIT licensed
 Copyright(c) 2018 Brooke Perry
