@@ -90,6 +90,8 @@ $(document).ready(function() {
 
     $("#results").append(finalString);
     $(".result").show();
+    $(".formDiv").hide();
+    
     // conertedArray is the array of numbers, up to userInput #
 
 
