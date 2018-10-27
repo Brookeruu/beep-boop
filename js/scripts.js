@@ -21,7 +21,7 @@ function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
   for (var i = 0; i < beepArray.length; i++) {
     if (i % 10 === 0 || i === 0) {
-      beepArray[i] = "Beep!";
+      beepArray[i] = " Beep! ";
     }
   }
   return beepArray;
@@ -31,21 +31,21 @@ function sorry(array) {
   var sorryArray = array;
   for (var i = 0; i < sorryArray.length; i++) {
     if (i % 3 === 0 && i !== 0) {
-      sorryArray[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
+      sorryArray[i] = " I'm sorry, Dave. I'm afraid I can't do that. ";
     }
   }
   return sorryArray;
 }
 
-function boop(array) {
-  var boopArray = array;
-  for (var i = 0; i < boopArray.length; i++) {
-    if (onesNumbers.includes(boopArray[i])) {
-      boopArray[i] = "Boop!";
-    }
-  }
-  return boopArray;
-}
+// function boop(array) {
+//   var boopArray = array;
+//   for (var i = 0; i < boopArray.length; i++) {
+//     if (onesNumbers.includes(boopArray[i])) {
+//       boopArray[i] = " Boop! ";
+//     }
+//   }
+//   return boopArray;
+// }
 
 function convertNumberToArray(number) { //number is inputNumber as argument
   if (number < 0 || number > 100) {
@@ -69,24 +69,33 @@ $(document).ready(function() {
     event.preventDefault();
 
 
-  var inputNumber = parseInt($("#numberInput").val());
-  // console.log(inputNumber);
-  var convertedArray = convertNumberToArray(inputNumber);
-  // console.log(convertedArray);
+    var inputNumber = parseInt($("#numberInput").val());
+    // console.log(inputNumber);
+    var convertedArray = convertNumberToArray(inputNumber);
+    // console.log(convertedArray);
 
-  var beepTest = beep(convertedArray);
-  // console.log(beepTest);
+    var beepTest = beep(convertedArray);
+    // console.log(beepTest);
 
-  var sorryTest = sorry(beepTest);
+    var sorryTest = sorry(beepTest);
 
-  var boopTest = boop(sorryTest);
-  console.log(boopTest);
-  $("#results").append(sorryTest);
-  $(".result").show();
-  // conertedArray is the array of numbers, up to userInput #
+    // var sorryTest = sorry(sorryTest);
+
+    var sorryString = sorryTest.toString("");
+    console.log(sorryString);
+
+    var finalString = sorryString.replace(/[1]/g, "Boop!");
+    console.log(finalString);
+    console.log(/[1]/.test(sorryString));
+
+    $("#results").append(finalString);
+    $(".result").show();
+    $(".formDiv").hide();
+    
+    // conertedArray is the array of numbers, up to userInput #
 
 
-  // var resultToShowUser = makeAstringOfNummbers(inputNumber);
+    // var resultToShowUser = makeAstringOfNummbers(inputNumber);
 
 
   });
