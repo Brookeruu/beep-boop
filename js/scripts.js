@@ -22,6 +22,16 @@ function sorry(array) {
   return sorryArray;
 }
 
+function boopMod1(array) {
+  var boopMod1Array = array;
+  for (var i = 0; i < boopMod1Array.length; i++) {
+    if (i % 10 === 1) {
+      boopMod1Array[i] = "Boop!";
+    }
+  }
+  return boopMod1Array;
+}
+
 function convertNumberToArray(number) { //number is inputNumber as argument
   if (number < 0 || number > 100) {
     alert("Invalid Number: returning 10");
@@ -51,10 +61,13 @@ $(document).ready(function() {
 
     var sorryTest = sorry(beepTest);
 
-    var sorryString = sorryTest.toString("");
+    var boopTest = boopMod1(sorryTest);
+    console.log(boopTest);
 
-    var finalString = sorryString.replace(/[1]\S/g, "Boop!");
+    var boopString = boopTest.toString("");
 
+    var finalString = boopString.replace(/[1]\S/g, "Boop!");
+  
     $("#results").text(finalString);
 
     $(".result").show();
