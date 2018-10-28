@@ -1,3 +1,14 @@
 .result {
   display: none;
 }
+h2 {
+  font-size:45px;
+  color: steelblue;
+}
+
+p {
+  font-weight: bold;
+}
+#originalNum {
+  color: steelblue;
+}
