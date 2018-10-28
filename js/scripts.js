@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     var sorryString = sorryTest.toString("");
 
-    var finalString = sorryString.replace(/[1]/g, "Boop!");
+    var finalString = sorryString.replace(/[1]\S/g, "Boop!");
 
     $("#results").text(finalString);
 
