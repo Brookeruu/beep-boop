@@ -3,7 +3,7 @@
 
 By Brooke Perry
 
-_This site was created as the Intro to Programming Week 3 Independent Project. The purpose of this project is to have a user input a number and receive a string of numbers, starting from 0, through the number input, with the following exceptions:
+_This site was created as the Intro to Programming Week 3 Independent Project. The purpose of this project is to have a user input a number and receive a string of numbers, starting from 0, through the number input, with the following exceptions:_
 
 
 ### Specs
@@ -38,6 +38,7 @@ Link to github: https://github.com/Brookeruu/beep-boop
 * jQuery
 
 **Contact**
-Brooke Perry
+* Brooke Perry perrysbrooke@gmail.com
+
 _This software is licensed under the MIT licensed_
 Copyright(c) 2018 Brooke Perry

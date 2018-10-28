@@ -1,7 +1,5 @@
 // Business Logic
 
-var onesNumbers = [/[1]/];
-
 function beep(array) { //argument will be arrayOfNumbers
   var beepArray = array;
   for (var i = 0; i < beepArray.length; i++) {
@@ -26,7 +24,7 @@ function boopMod1(array) {
   var boopMod1Array = array;
   for (var i = 0; i < boopMod1Array.length; i++) {
     if (i % 10 === 1) {
-      boopMod1Array[i] = "Boop!";
+      boopMod1Array[i] = " Boop!";
     }
   }
   return boopMod1Array;
@@ -62,12 +60,11 @@ $(document).ready(function() {
     var sorryTest = sorry(beepTest);
 
     var boopTest = boopMod1(sorryTest);
-    console.log(boopTest);
 
     var boopString = boopTest.toString("");
 
     var finalString = boopString.replace(/[1]\S/g, "Boop!");
-  
+
     $("#results").text(finalString);
 
     $(".result").show();
