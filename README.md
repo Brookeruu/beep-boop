@@ -25,10 +25,7 @@ Link to github: https://github.com/Brookeruu/beep-boop
 
 
 **Known Bugs**
- * Only the 1 in all numbers containing a 1 is being changed to "Boop!"
- * Example input: 21
- * Expected output: "Boop!"
- * Actual output: 2"Boop!"
+ * None at this time.
 
 **Technologies Used**
 * html
