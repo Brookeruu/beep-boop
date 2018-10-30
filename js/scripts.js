@@ -25,43 +25,31 @@ function convertNumberToArray(number) { //number is inputNumber as argument
 //   return beepBoopSorryArray;
 //   console.log(beepBoopSorryArray);
 // }
-//
-//
 
 
-
-
-function beep(array) { //argument will be arrayOfNumbers
-  var beepArray = array;
-  for (var i = 0; i < beepArray.length; i++) {
-    if (i % 10 === 0 || i === 0) {
-      beepArray[i] = " Beep! ";
-    }
-  }
-  return beepArray;
-}
-
-function sorry(array) {
+function beepBoopSorry(array) {
   var sorryArray = array;
   for (var i = 0; i < sorryArray.length; i++) {
     if (i % 3 === 0 && i !== 0) {
       sorryArray[i] = " I'm sorry, Dave. I'm afraid I can't do that. ";
-    } else if (array[i].includes(0)) {
+    } else if ([i].includes(1)) {
+      sorryArray[i] = " Boop! ";
+    } else if ([i].includes(0)) {
       sorryArray[i] = " Beep! ";
     }
   }
   return sorryArray;
 }
 
-function boopMod1(array) {
-  var boopMod1Array = array;
-  for (var i = 0; i < boopMod1Array.length; i++) {
-    if (i % 10 === 1) {
-      boopMod1Array[i] = " Boop!";
-    }
-  }
-  return boopMod1Array;
-}
+// function boopMod1(array) {
+//   var boopMod1Array = array;
+//   for (var i = 0; i < boopMod1Array.length; i++) {
+//     if (i % 10 === 1) {
+//       boopMod1Array[i] = " Boop!";
+//     }
+//   }
+//   return boopMod1Array;
+// }
 
 
 
@@ -77,19 +65,18 @@ $(document).ready(function() {
     var convertedArray = convertNumberToArray(inputNumber);
     console.log(convertedArray);
 
-    // var newArray = beepBoopSorry(convertedArray);
-    // console.log(newArray);
-    //
-    // var beepTest = beep(convertedArray);
 
-    var sorryTest = sorry(convertedArray);
+    var sorryTest = beepBoopSorry(convertedArray);
     console.log(sorryTest);
 
-    var boopTest = boopMod1(sorryTest);
+    // var boopTest = boopMod1(sorryTest);
 
-    var boopString = boopTest.toString("");
+    var sorryString = sorryTest.toString("");
+    console.log(sorryString);
 
-    var finalString = boopString.replace(/[1]\S/g, "Boop!");
+    checkSorryString =
+
+    // var finalString = boopString.replace(/[1]\S/g, "Boop!");
 
     $("#results").text(finalString);
 
