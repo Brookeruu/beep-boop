@@ -1,6 +1,7 @@
 .result {
   display: none;
 }
+
 h2 {
   font-size:45px;
   color: steelblue;
@@ -9,6 +10,7 @@ h2 {
 p {
   font-weight: bold;
 }
+
 #originalNum {
   color: steelblue;
 }
