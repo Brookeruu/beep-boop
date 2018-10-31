@@ -1,7 +1,7 @@
 // Business Logic
 
-function convertNumberToArray(number) { //number is inputNumber as argument
-  var arrayOfNumbers = new Array(number + 1); //new Array() creates array with empty spaces to fill
+function convertNumberToArray(number) {
+  var arrayOfNumbers = new Array(number + 1);
   var count = 0; //each empty space receives count
   for (var i = 0; i < arrayOfNumbers.length; i++) {
     arrayOfNumbers[i] = count;
@@ -9,22 +9,6 @@ function convertNumberToArray(number) { //number is inputNumber as argument
   }
   return arrayOfNumbers; //array with numbers in each empty space, up to # of inputNumber;
 }
-
-
-// function beepBoopSorry(array) {
-//   var beepBoopSorryArray = []
-//   for (i=0; i<array.length; i++) {
-//     if (i % 3 === 0 && i !== 0) {
-//       array[i] = " I'm sorry, Dave. I'm afraid I can't do that. "
-//     } else if (array[i].includes(1)) {
-//       array[1] = " Boop! ";
-//     } else if (array[i].includes(0)) {
-//       array[i] = " Beep! ";
-//     }
-//   }
-//   return beepBoopSorryArray;
-//   console.log(beepBoopSorryArray);
-// }
 
 
 function beepBoopSorry(array) {
@@ -41,17 +25,6 @@ function beepBoopSorry(array) {
   return sorryArray;
 }
 
-// function boopMod1(array) {
-//   var boopMod1Array = array;
-//   for (var i = 0; i < boopMod1Array.length; i++) {
-//     if (i % 10 === 1) {
-//       boopMod1Array[i] = " Boop!";
-//     }
-//   }
-//   return boopMod1Array;
-// }
-
-
 
 
 // User Interface
@@ -62,21 +35,9 @@ $(document).ready(function() {
 
     var inputNumber = parseInt($("#numberInput").val());
 
-    // var convertedArray = convertNumberToArray(inputNumber);
+    var finalArray = beepBoopSorry(convertNumberToArray(inputNumber));
 
-
-    var sorryTest = beepBoopSorry(convertNumberToArray(inputNumber));
-    console.log(typeof sorryTest);
-
-    var test = [];
-    console.log(typeof test);
-
-    // var boopTest = boopMod1(sorryTest);
-
-
-    // var finalString = boopString.replace(/[1]\S/g, "Boop!");
-
-    $("#results").text(sorryTest);
+    $("#results").text(finalArray);
 
     $(".result").show();
 
