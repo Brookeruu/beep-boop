@@ -32,9 +32,9 @@ function beepBoopSorry(array) {
   for (var i = 0; i < sorryArray.length; i++) {
     if (i % 3 === 0 && i !== 0) {
       sorryArray[i] = " I'm sorry, Dave. I'm afraid I can't do that. ";
-    } else if ([i].includes(1)) {
+    } else if (i.toString().includes("1")) {
       sorryArray[i] = " Boop! ";
-    } else if ([i].includes(0)) {
+    } else if (i.toString().includes("0")) {
       sorryArray[i] = " Beep! ";
     }
   }
@@ -62,23 +62,21 @@ $(document).ready(function() {
 
     var inputNumber = parseInt($("#numberInput").val());
 
-    var convertedArray = convertNumberToArray(inputNumber);
-    console.log(convertedArray);
+    // var convertedArray = convertNumberToArray(inputNumber);
 
 
-    var sorryTest = beepBoopSorry(convertedArray);
-    console.log(sorryTest);
+    var sorryTest = beepBoopSorry(convertNumberToArray(inputNumber));
+    console.log(typeof sorryTest);
+
+    var test = [];
+    console.log(typeof test);
 
     // var boopTest = boopMod1(sorryTest);
 
-    var sorryString = sorryTest.toString("");
-    console.log(sorryString);
-
-    checkSorryString =
 
     // var finalString = boopString.replace(/[1]\S/g, "Boop!");
 
-    $("#results").text(finalString);
+    $("#results").text(sorryTest);
 
     $(".result").show();
 
